@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 234,
+    "details": "Um evento muito legal!",
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/9ce63d25-fc9d-4be5-b75e-6874675a0d37/attendees
+Content-Type: application/json
+
+{
+    "name": "fernando silva",
+    "email": "fernando@gmail.com"    
+}
+
+###
+
+GET http://localhost:3333/events/9ce63d25-fc9d-4be5-b75e-6874675a0d37
+
+###
+
+GET http://localhost:3333/attendees/3/badge
+
+###
+
+GET http://localhost:3333/attendees/3/check-in
+
+###
+
+GET http://localhost:3333/events/4396fcbb-e93c-4bac-99a4-104f56ca3207/attendees?query=matheus
